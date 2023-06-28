@@ -2,6 +2,7 @@ interface Props {
   title?: string;
   fontSize?: "Normal" | "Large";
   description?: string;
+  subtitle?: string;
   alignment: "center" | "left";
   colorReverse?: boolean;
 }
@@ -16,6 +17,7 @@ function Header(props: Props) {
               props.alignment === "left" ? "text-left" : "text-center"
             }`}
           >
+            {props.subtitle}
             {props.title &&
               (
                 <h1

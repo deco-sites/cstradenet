@@ -16,6 +16,7 @@ export interface Props {
   products: LoaderReturnType<Product[] | null>;
   title?: string;
   description?: string;
+  subtitle?: string;
   layout?: {
     headerAlignment?: "center" | "left";
     headerfontSize?: "Normal" | "Large";
@@ -27,6 +28,7 @@ function ProductShelf({
   products,
   title,
   description,
+  subtitle,
   layout,
   cardLayout,
 }: Props) {
@@ -41,6 +43,7 @@ function ProductShelf({
       <Header
         title={title || ""}
         description={description || ""}
+        subtitle={subtitle || ""}
         fontSize={layout?.headerfontSize || "Large"}
         alignment={layout?.headerAlignment || "center"}
       />
